@@ -7,5 +7,5 @@ summary 'Puppet Module for Swagger UI'
 description 'Puppet Module for Swagger UI'
 project_page 'https://github.com/meltwater/puppet-swagger'
 
-## Add dependencies, if any:
-# dependency 'username/name', '>= 1.2.0'
+dependency 'puppetlabs/stdlib', '>= 2.2.0'
+dependency 'camptocamp-archive'

@@ -2,6 +2,14 @@ swagger
 
 Provides a defined type to install as many Swagger UI instances as necessary
 
+Usage
+-----
+Note that this is a defined type, not a class. This allows multiple swagger instances to exist on one machine.
+
+swagger::instance { 'tomcat1':
+  tomcat_webapp_dir => '/var/lib/tomcat/webapps',
+}
+
 Support
 -------
 

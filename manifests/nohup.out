@@ -1,0 +1,127 @@
+QDBusConnection: session D-Bus connection created before QCoreApplication. Application may misbehave.
+QDBusConnection: session D-Bus connection created before QCoreApplication. Application may misbehave.
+QDBusObjectPath: invalid path ""
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+plasma-desktop(8936)/libplasma Plasma::isPluginVersionCompatible: unversioned plugin detected, may result in instability 
+Object::connect: No such signal org::freedesktop::UPower::DeviceAdded(QDBusObjectPath)
+Object::connect: No such signal org::freedesktop::UPower::DeviceRemoved(QDBusObjectPath)
+plasma-desktop(8936)/libplasma Plasma::PackagePrivate::isValid: Could not find required file mainscript 
+========================>  3 0
+static bool QDeclarativeMetaType::isModule(const QByteArray&, int, int) Qt 4.7 import detected; please note that Qt 4.7 is directly reusable as QtQuick 1.x with no code changes. Continuing, but startup time will be slower. 
+file:///usr/share/kde4/apps/plasma/plasmoids/battery/contents/ui/CompactRepresentation.qml:73:9: QML Column: Cannot specify top, bottom, verticalCenter, fill or centerIn anchors for items inside Column
+NetworkManagerQt "plasma-desktop" ( 8936 ) void NetworkManager::SettingsPrivate::init() : New Connections list 
+NetworkManagerQt "plasma-desktop" ( 8936 ) void NetworkManager::SettingsPrivate::init() :   "/org/freedesktop/NetworkManager/Settings/3" 
+NetworkManagerQt "plasma-desktop" ( 8936 ) void NetworkManager::SettingsPrivate::init() :   "/org/freedesktop/NetworkManager/Settings/0" 
+NetworkManagerQt "plasma-desktop" ( 8936 ) void NetworkManager::SettingsPrivate::init() :   "/org/freedesktop/NetworkManager/Settings/1" 
+NetworkManagerQt "plasma-desktop" ( 8936 ) void NetworkManager::SettingsPrivate::init() :   "/org/freedesktop/NetworkManager/Settings/2" 
+NetworkManagerQt "plasma-desktop" ( 8936 ) void NetworkManager::SettingsPrivate::init() : New Connections list 
+NetworkManagerQt "plasma-desktop" ( 8936 ) void NetworkManager::NetworkManagerPrivate::init() : Active connections: 
+NetworkManagerQt "plasma-desktop" ( 8936 ) void NetworkManager::NetworkManagerPrivate::init() :      "/org/freedesktop/NetworkManager/ActiveConnection/1" 
+NetworkManagerQt "plasma-desktop" ( 8936 ) void NetworkManager::NetworkManagerPrivate::init() : Device list 
+NetworkManagerQt "plasma-desktop" ( 8936 ) void NetworkManager::NetworkManagerPrivate::init() :    "/org/freedesktop/NetworkManager/Devices/0" 
+NetworkManagerQt "plasma-desktop" ( 8936 ) void NetworkManager::NetworkManagerPrivate::init() :    "/org/freedesktop/NetworkManager/Devices/1" 
+file:///usr/lib/kde4/imports/org/kde/plasma/components/SectionScroller.qml:103: TypeError: Result of expression 'listView' [null] is not an object.
+file:///usr/lib/kde4/imports/org/kde/plasma/components/SectionScroller.qml:175: ReferenceError: Can't find variable: sectionsRepeater
+file:///usr/lib/kde4/imports/org/kde/plasma/components/SectionScroller.qml:103: Error: Cannot assign [undefined] to QString
+file:///usr/share/kde4/apps/plasma/plasmoids/notifier/contents/ui/devicenotifier.qml:224:13: QML QDeclarativeListView_QML_259: Possible anchor loop detected on fill.
+file:///usr/share/kde4/apps/plasma/plasmoids/notifier/contents/ui/devicenotifier.qml:224:13: QML QDeclarativeListView_QML_259: Possible anchor loop detected on fill.
+file:///usr/share/kde4/apps/plasma/plasmoids/notifier/contents/ui/devicenotifier.qml:224:13: QML QDeclarativeListView_QML_259: Possible anchor loop detected on fill.
+file:///usr/share/kde4/apps/plasma/plasmoids/notifier/contents/ui/devicenotifier.qml:224:13: QML QDeclarativeListView_QML_259: Possible anchor loop detected on fill.
+file:///usr/share/kde4/apps/plasma/plasmoids/notifier/contents/ui/devicenotifier.qml:224:13: QML QDeclarativeListView_QML_259: Possible anchor loop detected on fill.
+file:///usr/share/kde4/apps/plasma/plasmoids/notifier/contents/ui/devicenotifier.qml:224:13: QML QDeclarativeListView_QML_259: Possible anchor loop detected on fill.
+file:///usr/share/kde4/apps/plasma/plasmoids/notifier/contents/ui/devicenotifier.qml:224:13: QML QDeclarativeListView_QML_259: Possible anchor loop detected on fill.
+file:///usr/share/kde4/apps/plasma/packages/org.kde.systemtray/contents/ui/IconsList.qml:53:9: QML MouseRedirectArea: Binding loop detected for property "width"
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasmapackage:/ui/NotificationDelegate/NotificationDelegate.qml:209:21: QML TextEdit: Possible anchor loop detected on fill.
+plasmapackage:/ui/NotificationDelegate/NotificationDelegate.qml:163:13: QML Item: Binding loop detected for property "height"
+plasmapackage:/ui/NotificationDelegate/NotificationDelegate.qml:163:13: QML Item: Binding loop detected for property "height"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/share/kde4/apps/plasma/plasmoids/org.kde.notifications/contents/ui/Notifications.qml:216:17: QML TabButton: Binding loop detected for property "implicitHeight"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabBar.qml:150:5: QML Item: Possible anchor loop detected on fill.
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabBar.qml:150:5: QML Item: Possible anchor loop detected on fill.
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasmapackage:/ui/NotificationDelegate/NotificationDelegate.qml:209:21: QML TextEdit: Possible anchor loop detected on fill.
+plasmapackage:/ui/NotificationDelegate/NotificationDelegate.qml:163:13: QML Item: Binding loop detected for property "height"
+plasmapackage:/ui/NotificationDelegate/NotificationDelegate.qml:163:13: QML Item: Binding loop detected for property "height"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/share/kde4/apps/plasma/plasmoids/org.kde.notifications/contents/ui/Notifications.qml:216:17: QML TabButton: Binding loop detected for property "implicitHeight"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabBar.qml:150:5: QML Item: Possible anchor loop detected on fill.
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabBar.qml:150:5: QML Item: Possible anchor loop detected on fill.
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasmapackage:/ui/NotificationDelegate/NotificationDelegate.qml:209:21: QML TextEdit: Possible anchor loop detected on fill.
+plasmapackage:/ui/NotificationDelegate/NotificationDelegate.qml:163:13: QML Item: Binding loop detected for property "height"
+plasmapackage:/ui/NotificationDelegate/NotificationDelegate.qml:163:13: QML Item: Binding loop detected for property "height"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/share/kde4/apps/plasma/plasmoids/org.kde.notifications/contents/ui/Notifications.qml:216:17: QML TabButton: Binding loop detected for property "implicitHeight"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabButton.qml:111:5: QML QObject_QML_125: Binding loop detected for property "portrait"
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabBar.qml:150:5: QML Item: Possible anchor loop detected on fill.
+file:///usr/lib/kde4/imports/org/kde/plasma/components/TabBar.qml:150:5: QML Item: Possible anchor loop detected on fill.
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: No menu for id 162 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 
+plasma-desktop(8936)/plasma StatusNotifierItemSource::refreshCallback: DBusMenu disabled for this application 

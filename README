@@ -1,0 +1,10 @@
+swagger
+
+Provides a defined type to install as many Swagger UI instances as necessary
+
+Support
+-------
+
+Please log tickets and issues at our [Projects site](https://github.com/meltwater/puppet-swagger)
+
+Pull Requests are always welcome

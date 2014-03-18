@@ -33,10 +33,13 @@
 #
 define swagger::instance (
   $download = true,
-  $download_url = 'https://codeload.github.com/wordnik/swagger-ui/zip/master',
-  $download_root_dir = 'swagger-ui-master',
+  $download_url = 'https://codeload.github.com/wordnik/swagger-ui/zip/v2.0.12',
+  $download_root_dir = 'swagger-ui-2.0.12',
   $download_extract_dir = '/opt',
   $tomcat_webapp_dir = '/var/lib/tomcat/webapps',
+  $doc_title = 'Swagger UI',
+  $resource_listing_url = 'http://petstore.swagger.wordnik.com/api/api-docs',
+  $logo_url = 'http://swagger.wordnik.com',
   $user = 'root',
   $group = 'root',
 ) {
@@ -61,11 +64,22 @@ define swagger::instance (
     exec { "${name} copy to webapps dir":
       command => "cp -a ${download_extract_dir}/${download_root_dir}/dist ${tomcat_webapp_dir}/swagger",
       creates => "${tomcat_webapp_dir}/swagger",
+      require => Archive[$name]
     }
     ->
     exec { "${name} chown swagger dir":
       command     => "chown -R ${user}:${group} ${tomcat_webapp_dir}/swagger",
       refreshonly => true,
     }
+
+    file { 'swagger-index':
+      ensure  => present,
+      path    => "${tomcat_webapp_dir}/swagger/index.html",
+      content => template('swagger/index.html.erb'),
+      owner   => $user,
+      group   => $group,
+      require => Exec["${name} chown swagger dir"],
+    }
+
   }
 }

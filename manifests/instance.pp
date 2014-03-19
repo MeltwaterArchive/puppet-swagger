@@ -105,7 +105,7 @@ define swagger::instance (
       refreshonly => true,
     }
 
-    file { 'swagger-index':
+    file { "${name} swagger-index":
       ensure  => present,
       path    => "${tomcat_webapp_dir}/swagger/index.html",
       content => template("swagger/index.html-${version_maj}.erb"),

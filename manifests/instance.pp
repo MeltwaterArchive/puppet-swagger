@@ -32,28 +32,35 @@
 # Author Name <william.leese@meltwater.com>
 #
 define swagger::instance (
+  $version = '2.0.12',
   $download = true,
-  $download_url = 'https://codeload.github.com/wordnik/swagger-ui/zip/v2.0.12',
-  $download_root_dir = 'swagger-ui-2.0.12',
+  $download_url = undef,
   $download_extract_dir = '/opt',
   $tomcat_webapp_dir = '/var/lib/tomcat/webapps',
   $doc_title = 'Swagger UI',
   $resource_listing_url = 'http://petstore.swagger.wordnik.com/api/api-docs',
   $logo_url = 'http://swagger.wordnik.com',
-  $index_version = undef,
   $user = 'root',
   $group = 'root',
 ) {
 
+  $download_root_dir = "swagger-ui-${version}"
+
   if $download {
-    $ext = regsubst($download_url, '.*\.(.*$)', '\1', 'G')
+    if $download_url {
+      $download_url_real = $download_url
+    } else {
+      $download_url_real = "https://codeload.github.com/wordnik/swagger-ui/zip/v${version}"
+    }
+
+    $ext = regsubst($download_url_real, '.*\.(.*$)', '\1', 'G')
 
     unless $ext == 'zip' or $ext == 'zip' or $ext == 'tar.gz' or $ext == 'tar.bz2' or $ext == 'tgz' or $ext == 'tgz2' {
       $extension_real = 'zip'
     }
 
     archive { $name:
-      url            => $download_url,
+      url            => $download_url_real,
       target         => $download_extract_dir,
       root_dir       => $download_root_dir,
       checksum       => false,
@@ -73,24 +80,13 @@ define swagger::instance (
       refreshonly => true,
     }
 
-    if $index_version != undef {
-        file { 'swagger-index':
-          ensure  => present,
-          path    => "${tomcat_webapp_dir}/swagger/index.html",
-          content => template("swagger/index.html-${index_version}.erb"),
-          owner   => $user,
-          group   => $group,
-          require => Exec["${name} chown swagger dir"],
-        }
-    } else {
-        file { 'swagger-index':
-          ensure  => present,
-          path    => "${tomcat_webapp_dir}/swagger/index.html",
-          source  => "${download_extract_dir}/${download_root_dir}/dist/index.html",
-          owner   => $user,
-          group   => $group,
-          require => Exec["${name} chown swagger dir"],
-        }
+    file { 'swagger-index':
+      ensure  => present,
+      path    => "${tomcat_webapp_dir}/swagger/index.html",
+      source  => "${download_extract_dir}/${download_root_dir}/dist/index.html",
+      owner   => $user,
+      group   => $group,
+      require => Exec["${name} chown swagger dir"],
     }
 
   }

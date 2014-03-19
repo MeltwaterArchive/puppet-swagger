@@ -40,6 +40,7 @@ define swagger::instance (
   $doc_title = 'Swagger UI',
   $resource_listing_url = 'http://petstore.swagger.wordnik.com/api/api-docs',
   $logo_url = 'http://swagger.wordnik.com',
+  $index_version = undef,
   $user = 'root',
   $group = 'root',
 ) {
@@ -72,13 +73,24 @@ define swagger::instance (
       refreshonly => true,
     }
 
-    file { 'swagger-index':
-      ensure  => present,
-      path    => "${tomcat_webapp_dir}/swagger/index.html",
-      content => template('swagger/index.html.erb'),
-      owner   => $user,
-      group   => $group,
-      require => Exec["${name} chown swagger dir"],
+    if $index_version != undef {
+        file { 'swagger-index':
+          ensure  => present,
+          path    => "${tomcat_webapp_dir}/swagger/index.html",
+          content => template("swagger/index.html-${index_version}.erb"),
+          owner   => $user,
+          group   => $group,
+          require => Exec["${name} chown swagger dir"],
+        }
+    } else {
+        file { 'swagger-index':
+          ensure  => present,
+          path    => "${tomcat_webapp_dir}/swagger/index.html",
+          source  => "${download_extract_dir}/${download_root_dir}/dist/index.html",
+          owner   => $user,
+          group   => $group,
+          require => Exec["${name} chown swagger dir"],
+        }
     }
 
   }

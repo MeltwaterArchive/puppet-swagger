@@ -1,30 +1,48 @@
 # == Defined type swagger::instance
 #
-# Full description of defined type swagger::instance here.
+# Installs swagger-ui (https://github.com/wordnik/swagger-ui/)
 #
 # === Parameters
 #
-# Document parameters here.
+# [*version*]
+#   Which version of swagger-ui to install.
 #
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
+# [*download*]
+#   true or false to decide whether swagger is installed by download or package.
+#   We currently only support download based install. Default is true
 #
-# === Variables
+# [*download_url*]
+#   Where to download swagger-ui from. Note that this url if specified, must either
+#   end with a archive extension (.gz, .gzip, .zip) or else '.zip' will be assumed.
+#   If this does not match up, then the module will fail to install swagger-ui,
 #
-# Here you should define a list of variables that this module would require.
+# [*download_extract_dir*]
+#   Where to extract swagger-ui to. This is just a temporary storage until the app
+#   is copied into $tomcat_webapp_dir.
 #
-# [*sample_variable*]
-#   Explanation of how this variable affects the funtion of this class and if
-#   it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#   External Node Classifier as a comma separated list of hostnames." (Note,
-#   global variables should be avoided in favor of class parameters as
-#   of Puppet 2.6.)
+# [*tomcat_webapp_dir*]
+#   Where to copy swagger-ui to.
+#
+# [*doc_title*]
+#   The title of the swagger-ui index page.
+#
+# [*resource_listing_url*]
+#   api-docs URL.
+#
+# [*logo_url*]
+#   Where to link the logo to.
+#
+# [*user*]
+#   The user the swagger-ui app is chowned to.
+#
+# [*group*]
+#   The group the swagger-ui app is chowned to.
 #
 # === Examples
 #
 #  class { swagger:
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
+#    version           => '2.0.12',
+#    tomcat_webapp_dir => '/opt/tomcat-6.0.29/webapps',
 #  }
 #
 # === Authors
@@ -32,7 +50,7 @@
 # Author Name <william.leese@meltwater.com>
 #
 define swagger::instance (
-  $version = '2.0.12',
+  $version = undef,
   $download = true,
   $download_url = undef,
   $download_extract_dir = '/opt',
@@ -44,13 +62,20 @@ define swagger::instance (
   $group = 'root',
 ) {
 
-  $download_root_dir = "swagger-ui-${version}"
+  if $version {
+    $version_real = $version
+  } else {
+    $version_real = '2.0.12'
+  }
+  $version_maj = regsubst($version_real, '^([0-9]*)\..*', '\1')
+
+  $download_root_dir = "swagger-ui-${version_real}"
 
   if $download {
     if $download_url {
       $download_url_real = $download_url
     } else {
-      $download_url_real = "https://codeload.github.com/wordnik/swagger-ui/zip/v${version}"
+      $download_url_real = "https://codeload.github.com/wordnik/swagger-ui/zip/v${version_real}"
     }
 
     $ext = regsubst($download_url_real, '.*\.(.*$)', '\1', 'G')
@@ -72,7 +97,7 @@ define swagger::instance (
     exec { "${name} copy to webapps dir":
       command => "cp -a ${download_extract_dir}/${download_root_dir}/dist ${tomcat_webapp_dir}/swagger",
       creates => "${tomcat_webapp_dir}/swagger",
-      require => Archive[$name]
+      require => Archive[$name],
     }
     ->
     exec { "${name} chown swagger dir":
@@ -83,7 +108,7 @@ define swagger::instance (
     file { 'swagger-index':
       ensure  => present,
       path    => "${tomcat_webapp_dir}/swagger/index.html",
-      source  => "${download_extract_dir}/${download_root_dir}/dist/index.html",
+      content => template("swagger/index.html-${version_maj}.erb"),
       owner   => $user,
       group   => $group,
       require => Exec["${name} chown swagger dir"],

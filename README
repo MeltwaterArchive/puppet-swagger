@@ -1,4 +1,10 @@
-swagger
+[DEPRECATED] swagger
+====================
+
+NOTE: This repository is no longer maintained
+---------------------------------------------
+
+
 
 Provides a defined type to install as many Swagger UI instances as necessary
 
